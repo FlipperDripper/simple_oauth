@@ -5,6 +5,11 @@ const router = require('express').Router();
 
 const getOpenIdRedirectUrl = require('../helpers/getOpenIdRedirectLink');
 
+router.post('/logut', (req, res)=>{
+    res.clearCookie('access_token');
+    res.status(200).send();
+})
+
 router.post('/vk', (req, res)=>{
     res.status(200).send({
         redirectUrl: getOpenIdRedirectUrl(constants.OPEN_ID_SERVICES.VK)

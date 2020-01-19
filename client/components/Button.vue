@@ -1,5 +1,5 @@
 <template>
-    <button @click="click">
+    <button @click="click" class="button">
         {{text}}
     </button>
 </template>
@@ -19,5 +19,12 @@
 </script>
 
 <style scoped>
-
+    .button{
+        background-color: #5181b8;
+        color: #fff;
+        border: 0;
+        border-radius: 4px;
+        padding: 10px 15px;
+        font-weight: bold;
+    }
 </style>

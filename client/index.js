@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import './interseptor';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
@@ -8,7 +9,8 @@ import store from "./store";
 Vue.use(Vuex);
 const vuexStore = new Vuex.Store(store);
 const router = new VueRouter({
-    routes
+    routes,
+    mode: 'history'
 })
 
 
